@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form method="post" action="{{ url_for('send') }}" enctype="multipart/form-data">
+    <input type="file" id="img_file" name="img_file">
+    <input type="submit" value="Submit" class="btn">
+</form>
+
+{% if img_url %}
+<p><img src="{{ img_url }}"></p>
+{% endif %}
+
+
+{% endblock %}
+
+
